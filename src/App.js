@@ -1,11 +1,7 @@
-import Button from "react-bootstrap/Button";
+import Canvas from "./components/Canvas";
 
 function App() {
-  return (
-    <Button variant="primary" as="as" className="m-4">
-      Hola Mundo
-    </Button>
-  );
+  return <Canvas />;
 }
 
 export default App;
