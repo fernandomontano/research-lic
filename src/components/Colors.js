@@ -3,36 +3,33 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-
 export default function Colors({ selectedColor }) {
-  const handleClick = () => {
-    // handle click is the event that changes the selected color from Canvas component -🙂
-    window.onclick = (e) => {
-      // e.target => selected div.
-      selectedColor(window.getComputedStyle(e.target).backgroundColor);
-    };
-  };
-
+  // returns the colors with each row containing properties to select the desired color. 👀
   return (
     <div>
-      <Container >
-        <Row className="m-1" onClick={handleClick}>
+      <Container
+        onClick={(e) =>
+          selectedColor(window.getComputedStyle(e.target).backgroundColor)
+        }
+        className="bg-light rounded ms-2 py-2"
+      >
+        <Row className="m-1">
           <Col className="square rounded square-lg bg-danger text-danger p-4 m-1"></Col>
           <Col className="square rounded square-lg bg-warning text-success p-4 m-1 "></Col>
         </Row>
-        <Row className="m-1" onClick={handleClick}>
+        <Row className="m-1">
           <Col className="square rounded square-lg bg-success p-4 m-1"></Col>
           <Col className="square rounded square-lg bg-info p-4 m-1"></Col>
         </Row>
-        <Row className="m-1" onClick={handleClick}>
+        <Row className="m-1">
           <Col className="square rounded square-lg bg-secondary p-4 m-1"></Col>
           <Col className="square rounded square-lg bg-dark p-4 m-1"></Col>
         </Row>
-        <Row className="m-1" onClick={handleClick}>
+        <Row className="m-1">
           <Col className="square rounded square-lg color-indigo p-4 m-1"></Col>
           <Col className="square rounded square-lg bg-light p-4 m-1"></Col>
         </Row>
-        <Row className="m-1" onClick={handleClick}>
+        <Row className="m-1">
           <Col className="square rounded square-lg bg-$indigo p-4 m-1"></Col>
           <Col className="square rounded square-lg bg-dark p-4 m-1"></Col>
         </Row>
