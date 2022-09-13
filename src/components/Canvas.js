@@ -37,8 +37,7 @@ export default function Canvas() {
 
   // html containing a section, canvas and the Colors component, which takes a funcion to change color.
   return (
-    <section className="vh-100 bg-dark">
-      <TopBar />
+    <section className=" mt-5 bg-dark">
       <section className="d-flex justify-content-center align-items-center mt-5">
         <canvas
           className="bg-light border rounded"
