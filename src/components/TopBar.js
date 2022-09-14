@@ -21,7 +21,7 @@ export default function TopBar() {
             </Link>
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#about">
+            <Nav.Link href="">
               <Link to="/about" className="text-decoration-none text-light">
                 About Us
               </Link>

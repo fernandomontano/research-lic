@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Colors from "./Colors";
 import { useDraw } from "./Hooks";
-import TopBar from "./TopBar";
 
 export default function Canvas() {
   const [color, setColor] = useState(); // allows us to change the color (the color is changed at Colors component) but used here.😯
@@ -45,6 +44,7 @@ export default function Canvas() {
           width="1000px"
           height="500px"
           onMouseDown={mouseDown}
+          id="canva"
         />
         <Colors selectedColor={changeColor} />
       </section>
